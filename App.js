@@ -3,7 +3,7 @@ import { StyleSheet} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { Login } from './src/Login'
+import Login from './src/Login'
 
 const Stack = createStackNavigator();
 
