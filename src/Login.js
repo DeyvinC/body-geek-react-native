@@ -1,12 +1,12 @@
 import { StyleSheet} from 'react-native';
-import { View, TextInput, Text } from "react-native";
+import { View, TextInput, Text, Button } from "react-native";
 import { backgroundColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 
 export default function Login () {
        return(
            <>
-              <Text style={styles.header}> Body Geek</Text>
-            
+            <Text style={styles.header}> Body Geek</Text> 
+
             <View style={styles.container}>
                 <View style={styles.inputView}>
                     <TextInput
@@ -26,6 +26,12 @@ export default function Login () {
                     onChangeText={(password) => setPassword(password)}
                     />
                 </View>
+                <Button 
+                  style={styles.button}
+                  title='Sign Up'
+                  color='black'
+
+                />
           </View>
           </>
         )
@@ -54,10 +60,20 @@ const styles = StyleSheet.create({
         marginLeft: 20,
       },
       header: {
-          fontSize: 40,
+          fontSize: 70,
+          color: '#d4772a',
           textAlign: 'center',
-          marginTop: 20,
+          textAlignVertical: 'center',
           backgroundColor: 'white'
+      },
+      button: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingVertical: 12,
+        paddingHorizontal: 32,
+        borderRadius: 4,
+        elevation: 3,
+        backgroundColor: 'black',
       }
   });
   
