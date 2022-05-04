@@ -1,8 +1,7 @@
 import { StyleSheet} from 'react-native';
 import { View, TextInput, Text, Button } from "react-native";
-import { backgroundColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 
-export default function Login () {
+export default function Login ({navigation}) {
        return(
            <>
             <Text style={styles.header}> Body Geek</Text> 
@@ -26,10 +25,11 @@ export default function Login () {
                     onChangeText={(password) => setPassword(password)}
                     />
                 </View>
-                <Button 
+                <Button
                   style={styles.button}
                   title='Sign Up'
                   color='black'
+                  onPress={() => navigation.navigate('SignUp')}
 
                 />
           </View>
